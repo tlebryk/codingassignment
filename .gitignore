@@ -1,0 +1,8 @@
+logs/
+data/
+*.doc
+*.docx
+.vscode/
+*.pdf
+scrap/
+*.pyc
