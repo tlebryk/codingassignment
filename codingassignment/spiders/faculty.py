@@ -21,27 +21,3 @@ class FacultySpider(scrapy.Spider):
                 meta[key] = value
             meta["faculty_homepage"] = row.css("div.directory-name").css("a::attr(href)").get()
             yield meta
-
-
-    def facultyparse(self, response):
-        # can move this up into parse to send to proper parsing function? and never actually fetch...?
-        if urlparse(response.url).netloc == "https://www.cs.washington.edu/":
-            menunav = response.css("ul.menu")
-            # first menu nav is main nav bar, we care about second nav bar links
-            pages = menunav[1].css("a")
-            for page in pages:
-                url = page.css("::attr(href)").get()
-                name = extract_text(page.get())
-                # data = 
-
-            pass
-        else:
-            pass
-            # save name of faculty member to parse by hand
-
-    def subpageparse(self, response):
-        """
-        faculty pages have subpages like 'Biography', 'Research', 
-        'Publications', 'Presentations'
-        """
-        pass
