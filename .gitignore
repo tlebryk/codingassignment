@@ -4,5 +4,6 @@ data/
 *.docx
 .vscode/
 *.pdf
+*.csvre
 scrap/
 *.pyc
