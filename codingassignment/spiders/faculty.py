@@ -4,6 +4,8 @@ from html_text import extract_text
 from scrapy.shell import inspect_response
 
 class FacultySpider(scrapy.Spider):
+    # command: scrapy crawl faculty -O data/facultymain.py
+
     name = 'faculty'
     # allowed_domains = ['https://www.cs.washington.edu/']
     start_urls = ['https://www.cs.washington.edu/people/faculty/']
